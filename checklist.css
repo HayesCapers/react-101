@@ -1,0 +1,50 @@
+
+.container{
+	color: magenta;
+}
+
+.table-wrapper{
+	border: 1px solid magenta;
+	border-radius: 5px;
+	text-align: center;
+	background-color: lime;
+}
+
+.search-bar{
+	border: 1px solid magenta;
+	border-radius: 5px;
+	margin: 10px 3px 0px 3px;
+	background-color: lightsalmon;
+}
+
+.search-input{
+	margin-top: 10px;
+	border-radius: 5px;
+	border: 1px solid magenta;
+}
+
+.form-group{
+	margin-bottom: 0px;
+}
+
+.form-group span{
+	font: 10px roboto, sans-serif;
+}
+
+.container{
+	margin-top: 50px;
+}
+
+.results-headers span{
+	margin-right: 50px;
+}
+
+.results-headers{
+	margin-top: 20px;
+	border-bottom: 1px dashed tan;
+	color: blue;
+}
+
+h5{
+	color: darkkhaki;
+}
