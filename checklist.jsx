@@ -5,15 +5,18 @@ var products = [
 	type: [
 		{
 			name: 'Football',
-			price: '49.99'
+			price: '49.99',
+			inStock: true
 		},
 		{
 			name: 'Baseball',
-			price: '9.99'
+			price: '9.99',
+			inStock: true	
 		},
 		{
 			name: 'Basketball',
-			price: '29.99'
+			price: '29.99',
+			inStock: false
 		}
 	]
 },
@@ -22,15 +25,18 @@ var products = [
 	type: [
 		{
 			name: 'iPod Touch',
-			price: '99.99'
+			price: '99.99',
+			inStock: true
 		},
 		{
 			name: 'iPhone 5',
-			price: '399.99'
+			price: '399.99',
+			inStock: false
 		},
 		{
 			name: 'Nexus 7',
-			price: '199.99'
+			price: '199.99',
+			inStock: true
 		}
 	]
 }
@@ -71,7 +77,7 @@ function Category(props){
 			</div>
 			<div className='col-sm-12'>
 				{props.type.map((product,index)=>{
-					return <Product key={index} name={product.name} price={product.price} />
+					return <Product key={index} inStock={product.inStock} name={product.name} price={product.price} />
 				})}
 			</div>
 		</div>	
@@ -79,9 +85,15 @@ function Category(props){
 }
 
 function Product(props){
+	var productClass;
+	if (props.inStock === true){
+		productClass = 'text-success'
+	}else{
+		productClass = 'text-danger'
+	}
 	return(
 		<div className='row'>
-			<div className='col-sm-6'>
+			<div className={'col-sm-6 ' + productClass}>
 				{props.name}
 			</div>
 			<div className='col-sm-6'>
